@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/audebertvalentin/Documents/40SEC/C/Exercice/excercice'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _are_persons_equals, symObjAddr: 0x0, symBinAddr: 0x100003B68, symSize: 0x30 }
+  - { offsetInCU: 0x63, offset: 0x63, size: 0x8, addend: 0x0, symName: _are_persons_equals, symObjAddr: 0x0, symBinAddr: 0x100003B68, symSize: 0x30 }
+  - { offsetInCU: 0x99, offset: 0x99, size: 0x8, addend: 0x0, symName: _are_books_equals, symObjAddr: 0x30, symBinAddr: 0x100003B98, symSize: 0x30 }
+  - { offsetInCU: 0xCF, offset: 0xCF, size: 0x8, addend: 0x0, symName: _are_equals, symObjAddr: 0x60, symBinAddr: 0x100003BC8, symSize: 0x34 }
+  - { offsetInCU: 0x113, offset: 0x113, size: 0x8, addend: 0x0, symName: _is_in_array, symObjAddr: 0x94, symBinAddr: 0x100003BFC, symSize: 0xB0 }
+  - { offsetInCU: 0x19D, offset: 0x19D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x144, symBinAddr: 0x100003CAC, symSize: 0x1E4 }
+...
