@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "exo_TP.h"
+#include "TP.h"
 
 void clear_screen() {
     printf("\033[H\033[J");

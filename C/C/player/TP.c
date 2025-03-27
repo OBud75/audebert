@@ -1,4 +1,4 @@
-#include "exo_TP.h"
+#include "TP.h"
 
 
 Map* get_map(int height, int width) {

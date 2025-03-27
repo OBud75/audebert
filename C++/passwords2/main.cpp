@@ -29,6 +29,8 @@ int main() {
         std::cout << "Encrypted password as a string: " << password1.str() << std::endl;
 
     } catch (const std::exception &e) {
+        // Idéalement on évite de tout encapsuler dans un try/catch, on préfère faire des try/catch autour de chaque appel
+        // de fonction qui peut lever une exception et ainsi cibler chaque erreur.
         std::cerr << "Error: " << e.what() << std::endl;
     }
 

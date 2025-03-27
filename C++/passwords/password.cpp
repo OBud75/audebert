@@ -23,6 +23,7 @@ bool Password::is_valid(const std::string &password) const {
 
 	// if not cap letters
 	int start = 'A';
+	// En c++ on peut utiliser for (auto c: password) { ... }
 	for (char c : password) {
 		for (int j = 0; j < 26; j++) {
 			if (c == (start+j) ) {

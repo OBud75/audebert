@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "myArray.h"
+#include "array.h"
 
 float average(int arr[], int n){
     float s = 0;

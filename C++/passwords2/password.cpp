@@ -3,8 +3,11 @@
 Password::Password(const std::string &password, bool is_encrypted) {
     if (!is_encrypted) {
         if (!is_valid(password)) {
+            // on aura tendance à mettre le message d'erreur dans la fonction is_valid pour le garder à côté de la règle
 		std::cout << "Password must be at least 6 characters long, contain one uppercase letter, and one special character." << std::endl;
         }
+        // Si le mot de passe n'est pas valide ici vous appelez quand même la fonction encrypt.
+        // On peut return ou throw une exception throw std::invalid_argument("Invalid password");
         raw_value = password;
         encrypt();
     } else {
