@@ -39,8 +39,17 @@ int is_in_array(void *obj_to_find, void *array, int nb_of_elems_in_array, size_t
         }
         p += elem_size; // Avancer au prochain élément
     }
+
+    // On peu itérer directement sur les pointeurs:
+    // for (char *p = (char *)array; p < (char *)array + nb_of_elems_in_array * elem_size; p += elem_size) {
+    //     if (compare_fnc(obj_to_find, (void *)p)) {
+    //         return 1;
+    //     }
+    // }
     return 0; // Pas trouvé
 }
+
+// Comme fonction de comparaison on peut penser à retourner -1 si obj1 < obj2, 0 si égal et 1 si obj1 > obj2
 
 int main() {
     // Allouer dynamiquement deux personnes
@@ -144,6 +153,7 @@ int main() {
     free(book1);
     free(book2);
     free(book_array);
+    // En sortant du programme, toute la mémoire allouée est de toute façon libérée
 
     return 0;
 }

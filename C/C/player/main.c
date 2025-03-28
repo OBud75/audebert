@@ -29,6 +29,13 @@ int main() {
 	while (running) {
 		printf("Enter direction to move (t=up, h=right, g=down, f=left, q=quit): ");
 		scanf(" %c", &direction);
+		// Avec %c, seul le premier caractère sera pris par scanf, mais le reste restera dans le buffer d'entrée.
+		// En c++ le std::endl vide le buffer d'entrée, mais en c il faut le faire manuellement.
+		// Une solution rapide pour vider le buffer serait de faire
+		// char ch;
+		// while ((ch = getchar()) != '\n' && ch != EOF)
+		//     continue;
+		// Eventuellement si vous codez en C plus tard regardez du côté de gets() and fgets()
 		if (direction == 'q') {
 			running = 0;
 		}

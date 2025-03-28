@@ -62,6 +62,7 @@ int main() {
 
     printf("%d\n", arr->capacity);
 
+    // Dans les faits la mémoire sera de toute façon libérée à la fin du programme
     free_array(arr);
 
     return 0;
