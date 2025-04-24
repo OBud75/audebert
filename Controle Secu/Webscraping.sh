@@ -44,3 +44,5 @@ done < resource_links.txt
 echo "Extraction et insertion terminées."
 
 rm sitemap_data.xml resource_links.txt
+
+# Prennez l'habitude de diviser le code en plusieurs fonctions.

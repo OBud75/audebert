@@ -6,11 +6,12 @@ with open("sitemap.xml", 'r') as f:
 
 content = content[2].split("https")
 
-l = []
+l = []  # Evitez les noms de variables non explicites
 searched = "://readi.fi/asset"
 for url in content:
     if searched in url:
         l.append("https"+url)
+# urls = [url for url in content if searched in url]
 
 l_title_desc = []
 def get_content(url):
@@ -34,6 +35,12 @@ for i in range(len(l)):
     t = threading.Thread(target=get_content, args=(l[i],)) # l[i] = url; let the `,` where it is.
     t.start()
     l_threads.append(t)
+
+# Python permet de loop directement sur les objets,
+# Aussi, on préfère passer la liste à la fonction plutôt que d'une vaiable globale
+# for url in urls:
+#     t = threading.Thread(target=get_content, args=(url, l_title_desc))
+
 
 for t in l_threads: t.join()
 

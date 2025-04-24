@@ -43,3 +43,6 @@ _start:
     mov eax, 1                         
     xor ebx, ebx                       
     int 0x80                           
+
+
+; Il est possible de céer des fonctions (get_input, exit ...)
